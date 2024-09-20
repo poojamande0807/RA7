@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import {
+  ChakraProvider,
+  Box,
+  Heading,
+  Button,
+  Input,
+  Card,
+  CardBody,
+  Text,
+} from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Box p={5}>
+        <Heading mb={4}>My Chakra UI App</Heading>
+
+        <Input placeholder="Enter your input" mb={4} />
+
+        <Button colorScheme="teal" mb={4}>
+          Submit
+        </Button>
+
+        <Card>
+          <CardBody>
+            <Text>This is a card component showcasing information.</Text>
+          </CardBody>
+        </Card>
+      </Box>
+    </ChakraProvider>
   );
 }
 
